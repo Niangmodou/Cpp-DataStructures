@@ -3,8 +3,6 @@
 
 using namespace std;
 
-void func1();
-
 template <class queueType>
 class Queue{
 private:

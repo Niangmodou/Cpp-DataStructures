@@ -1,5 +1,9 @@
 #include <vector>
 
+<<<<<<< HEAD
+=======
+using namespace std;
+>>>>>>> a897570f3a7d6cde78adfe81957bdb726f6e8ce7
 
 template <class queueType>
 class Queue{

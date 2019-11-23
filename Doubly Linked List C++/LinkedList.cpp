@@ -44,9 +44,7 @@ namespace STL{
 		//}
 	}
 	int List::back() const {
-		//if(!empty()){
 			return trailer->prev->data;
-		//}
 	}
 
 	int& List::front(){

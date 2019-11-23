@@ -39,9 +39,7 @@ namespace STL{
 	}
 
 	int List::front() const{
-		//if(!empty()){
 			return header->next->data;
-		//}
 	}
 	int List::back() const {
 			return trailer->prev->data;

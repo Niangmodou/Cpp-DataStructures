@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib> 
 #include <ctime> 
-#include "Queue.cpp"
+#include "Queue.h"
 
 using namespace std;
 

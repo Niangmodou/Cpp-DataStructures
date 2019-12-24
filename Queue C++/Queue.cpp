@@ -3,27 +3,27 @@
 
 using namespace std;
 
-template <class T>
-Queue<T>::Queue(size_t capacity = 1) : capacity(capacity), mySize(0) {
+template <typename T>
+Queue<T>::Queue(size_t capacity) : capacity(capacity), mySize(0) {
 	data = new T[capacity];
 }
 
-template <class T>
+template <typename T>
 Queue<T>::~Queue(){
 	delete [] data;
 }
 
-template <class T>
+template <typename T>
 size_t Queue<T>::size() const {
 	return mySize;
 }
 
-template <class T>
-bool Queue<T>::empty(){
+template <typename T>
+bool Queue<T>::empty() const {
 	return size() == 0;
 }
 
-template <class T>
+template <typename T>
 void Queue<T>::enqueue(T val){
 	if(mySize == capacity){ //Full
 		T* old = data;
@@ -46,7 +46,7 @@ void Queue<T>::enqueue(T val){
 
 }
 
-template <class T>
+template <typename T>
 T Queue<T>::dequeue(){
 	if(empty()){
 		cerr << "Queue is Empty!" << endl;
@@ -62,8 +62,8 @@ T Queue<T>::dequeue(){
 	return val;
 }
 
-template <class T>
-T Queue<T>::first(){
+template <typename T>
+T Queue<T>::first() const {
 	if(empty()){
 		cerr << "Queue is Empty!" << endl;
 		return -1;
@@ -71,7 +71,8 @@ T Queue<T>::first(){
 	return data[mySize - 1];
 }
 
-ostream& operator<<(ostream& os, const Queue& rhs){
+template <typename T>
+ostream& operator<<(ostream& os, const Queue<T>& rhs){
 	while(!rhs.empty()){
 		os << rhs.pop() << " ";
 	}

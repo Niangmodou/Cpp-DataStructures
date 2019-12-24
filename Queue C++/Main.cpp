@@ -17,7 +17,7 @@ int main(){
 
 	cout << "Printing Results ... " << endl;
 
-	cout << myQueue();
+	cout << myQueue;
 
 	cout << endl << "RUN FINISHED; ";
 	return 0;

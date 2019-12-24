@@ -2,7 +2,7 @@
 
 template<typename T>
 class Queue{
-	friend std::ostream& operator<<(std::ostream&, const Queue&);
+	friend std::ostream& operator<<(std::ostream&, const Queue<T>&);
 public:
 	Queue(size_t capacity = 1);
 
@@ -10,15 +10,13 @@ public:
 
 	size_t size() const;
 
-	bool empty(){
-		return size() == 0;
-	}
+	bool empty() const ;
 
 	void enqueue(T val);
 
 	T dequeue();
 
-	T first();
+	T first() const;
 
 private:
 	int* data;

@@ -1,24 +1,28 @@
 #include <iostream>
 
 template<typename T>
-Stack::Stack(int capacity = 1) : mySize(0), capacity(capacity){
+Stack<T>::Stack(int capacity = 1) : mySize(0), capacity(capacity){
 	data = new T[capacity];
 
 }
 
-Stack::~Stack(){
+template<typename T>
+Stack<T>::~Stack(){
 	delete [] data;
 }
 
-size_t Stack::size() const {
+template<typename T>
+size_t Stack<T>::size() const {
 	return mySize;
 }
 
-bool Stack::empty(){
+template<typename T>
+bool Stack<T>::empty(){
 	return mySize == 0;
 }
 
-void Stack::push(T val){
+template<typename T>
+void Stack<T>::push(T val){
 	if(mySize == capacity){
 		T* old = data;
 		data = new T[2*capacity];
@@ -32,7 +36,8 @@ void Stack::push(T val){
 	++mySize;
 }
 
-T Stack::pop(){
+template<typename T>
+T Stack<T>::pop(){
 	if(empty()){
 		cerr << "Stack is Empty!" << endl;
 		return -1;
@@ -42,6 +47,7 @@ T Stack::pop(){
 	return val;
 }
 
+template<typename T>
 T Stack::top(){
 	if(empty()){
 		cerr << "STACK EMPTY;" << endl;
@@ -50,7 +56,8 @@ T Stack::top(){
 	return data[mySize-1];
 }
 
-ostream& operator<<(ostream& os, const Stack& rhs){
+template<typename T>
+ostream& operator<<(ostream& os, const Stack<T>& rhs){
 	while(!rhs.empty()){
 		os << rhs.pop() << " ";
 	}

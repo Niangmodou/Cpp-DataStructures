@@ -1,34 +1,34 @@
 #include <iostream>
 #include <ctime> 
-#include "Queue.h"
+#include "Stack.h"
 
 using namespace std;
 
 void generateNumbers(Queue<int> &queue);
 
 int main(){
-	Queue<int> myQueue;
+	Stack<int> myStack;
 
 	cout << "Adding numbers from 1 - 100 in Queue ..." << endl << endl;
 
-	generateNumbers(myQueue);
+	generateNumbers(myStack);
 
 	cout << "Elements Enqueued! " << endl << endl;
 
 	cout << "Printing Results ... " << endl;
 
-	cout << myQueue();
+	cout << myStack();
 
 	cout << endl << "RUN FINISHED; ";
 	return 0;
 }
 
-void generateNumbers(Queue<int>& queue){
+void generateNumbers(Stack<int>& stack){
 
 	srand(time(0)); 
     int randInt; 
     for(int index=0; index<20; index++){ 
         randInt = (rand()%100)+1; 
-       	queue.enqueue(randInt);
+       	stack.push(randInt);
     }
 }

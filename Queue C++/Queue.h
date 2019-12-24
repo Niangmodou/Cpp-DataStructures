@@ -1,31 +1,29 @@
-#include <vector>
+#include <iostream>
 
-<<<<<<< HEAD
-=======
-using namespace std;
->>>>>>> a897570f3a7d6cde78adfe81957bdb726f6e8ce7
-
-template <class queueType>
+template<typename T>
 class Queue{
-private:
-	std::vector<queueType> queueData;
-	queueType frontInd;
-	int numElems;
-
+	friend std::ostream& operator<<(std::ostream&, const Queue&);
 public:
-	Queue();
+	Queue(size_t capacity = 1);
 
 	~Queue();
 
-	int length();
+	size_t size() const;
 
-	bool is_empty();
+	bool empty(){
+		return size() == 0;
+	}
 
-	void enqueue(queueType elem);
+	void enqueue(T val);
 
-	queueType dequeue();
+	T dequeue();
 
-	queueType first();
+	T first();
 
-	void displayQueue();
+private:
+	int* data;
+	size_t mySize;
+	size_t capacity;
+	int frontInd;
+
 };

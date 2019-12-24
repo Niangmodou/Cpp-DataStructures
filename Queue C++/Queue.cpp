@@ -71,7 +71,8 @@ T Queue<T>::first(){
 	return data[mySize - 1];
 }
 
-ostream& operator<<(ostream& os, const Queue& rhs){
+template <class T>
+ostream& operator<<(ostream& os, const Queue<T>& rhs){
 	while(!rhs.empty()){
 		os << rhs.pop() << " ";
 	}

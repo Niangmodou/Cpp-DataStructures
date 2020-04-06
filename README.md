@@ -16,8 +16,6 @@ implemented in C++.
 - Graph
 
 <b>Algorithms:</b> <br>
-Sorting:
-  - Merge Sort
-  - Bubble Sort
-  - Quick Sort
-  - Insertion Sort
+- Merge Sort
+- Bubble Sort
+- Binary Search

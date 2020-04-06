@@ -1,8 +1,9 @@
 # Cpp-DataStructures
 
-This is a repository of the common data structures implemented 
-in C++. The data structures that are implemented include:
+This is a repository of the common data structures and algorithms
+implemented in C++. 
 
+<b>Data Structures<b>
 1. Queue
 2. Stack
 3. Vector
@@ -13,3 +14,5 @@ in C++. The data structures that are implemented include:
 8. Heap
 9. Hash Table
 10. Graph
+
+<b>Algorithms: <b>

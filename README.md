@@ -15,7 +15,7 @@ implemented in C++.
 - Hash Table
 - Graph
 
-<b>Algorithms:</b>
+<b>Algorithms:</b> <br>
 Sorting:
   - Merge Sort
   - Bubble Sort

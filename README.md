@@ -3,7 +3,7 @@
 This is a repository of the common data structures and algorithms
 implemented in C++. 
 
-<b>Data Structures<b>
+<b>Data Structures</b>
 1. Queue
 2. Stack
 3. Vector
@@ -15,4 +15,4 @@ implemented in C++.
 9. Hash Table
 10. Graph
 
-<b>Algorithms: <b>
+<b>Algorithms:</b>
